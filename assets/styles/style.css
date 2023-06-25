@@ -13,6 +13,7 @@
     background-size: cover;
     position: relative;
     z-index: 1;
+    margin-bottom: 116px;
 }
 
 .header {
@@ -133,6 +134,7 @@
 @media (max-width:1024px) {
     .wrapper {
         padding-bottom: 126px;
+        margin-bottom: 78px;
     }
 
     .header {
@@ -163,6 +165,7 @@
     .banner__button {
         max-width: 313px;
     }
+
 
 }
 
@@ -209,5 +212,112 @@
         padding: 18px;
     }
 
+
+}
+
+.advantages {
+    text-align: center;
+    margin-bottom: 116px;
+}
+
+.advantages__items {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0;
+    column-gap: 30px;
+    row-gap: 88px;
+}
+
+.advantages__item {
+    max-width: 370px;
+    width: calc((100% - 40px) / 3);
+}
+
+.advantages__icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 29px;
+    margin: auto;
+}
+
+.advantages__title {
+    color: #2D3033;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 28px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.advantages__text {
+    color: #6C7279;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 21px;
+}
+
+@media (max-width:1024px) {
+
+    .advantages__items {
+        column-gap: 20px;
+        row-gap: 49px;
+    }
+
+    .advantages__item {
+        max-width: 315px;
+    }
+
+    .advantages__icon svg {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 24px;
+    }
+
+    .advantages__title {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 20px;
+        margin-bottom: 4px;
+    }
+
+    .advantages__text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .advantages {
+        margin-bottom: 40px;
+    }
+
+    .advantages__items {
+        display: block;
+    }
+
+    .advantages__item {
+        max-width: 280px;
+        width: 100%;
+        margin: 0 auto 42px;
+    }
+
+    .advantages__items:last-child() {
+        margin-bottom: 0;
+    }
+
+    .advantages__icon svg {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 21px;
+    }
+
+    .advantages__title {
+        padding: 16px;
+    }
 
 }
