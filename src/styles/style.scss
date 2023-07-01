@@ -398,6 +398,7 @@
     }
 
     &__item {
+        position:relative;
         @media (max-width:767px) {
         margin-bottom:49px;
         }
@@ -408,15 +409,12 @@
 
     &__wrapper-photo{
         margin-bottom:30px;
+        aspect-ratio: 1;
 
         @media (max-width:1024px) {
             margin-bottom:25px;
         }
 
-        @media (max-width:767px) {
-        width: 280px;
-        height: 227px
-            }
     }
 
     &__photo{
@@ -482,6 +480,14 @@
     &__contacts{
         display:flex;
         column-gap: 5px;
+        position:absolute;
+        bottom:0;
+        transform: translateY(38px);
+
+        @media (max-width:767px) {
+            position: inherit;
+            transform: none;
+        }
     }
 
     &__social-media{
