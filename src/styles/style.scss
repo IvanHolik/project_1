@@ -298,11 +298,10 @@
         }
 
         @media (max-width:767px) {
-            max-width: 280px;
             width: 100%;
             margin: 0 auto 42px;
 
-            &:last-child() {
+            &:last-child {
                 margin-bottom: 0;
             }
         }
@@ -312,14 +311,22 @@
     &__icon {
         width: 100px;
         height: 100px;
-        margin-bottom: 29px;
         margin: auto;
+        margin-bottom: 51px;
+
+        @media (max-width:1024px) {
+            margin-bottom: 44px;
+        }
+
+        @media (max-width:1024px) {
+            margin-bottom: 37px;
+        }
+
 
         & svg {
             @media (max-width:1024px) {
                 width: 85px;
                 height: 85px;
-                margin-bottom: 24px;
             }
 
             @media (max-width:767px) {
@@ -340,18 +347,12 @@
         font-weight: 900;
         text-transform: uppercase;
         line-height: 28px;
-        padding: 22px;
         margin-bottom: 20px;
 
         @media (max-width:1024px) {
             font-size: 18px;
             line-height: 21px;
-            padding: 20px;
             margin-bottom: 4px;
-        }
-
-        @media (max-width:767px) {
-            padding: 16px;
         }
 
     }
