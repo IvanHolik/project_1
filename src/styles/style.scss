@@ -275,7 +275,9 @@
 
 
     &__items {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         flex-wrap: wrap;
         column-gap: 30px;
         row-gap: 88px;
@@ -291,11 +293,6 @@
     }
 
     &__item {
-        width: calc((100% - 60px) / 3);
-
-        @media (max-width:1024px) {
-            width: calc((100% - 40px) / 3);
-        }
 
         @media (max-width:767px) {
             width: 100%;
