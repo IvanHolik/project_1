@@ -389,7 +389,6 @@
     display: flex;
     position: relative;
     border: 1px solid #fff;
-    aspect-ratio: 1;
 
     &__info {
         position: absolute;
@@ -473,7 +472,8 @@
     }
 
     &__item {
-        position: relative;
+        display: flex;
+        flex-direction: column;
 
         @media (max-width:767px) {
             margin-bottom: 49px;
@@ -485,6 +485,7 @@
     }
 
     &__wrapper-photo {
+        display: flex;
         margin-bottom: 30px;
         aspect-ratio: 1;
 
@@ -541,6 +542,7 @@
         font-weight: 400;
         line-height: 21px;
         margin-bottom: 38px;
+        flex-grow:1;
 
         @media (max-width:1024px) {
             line-height: 16px;
@@ -557,9 +559,6 @@
     &__contacts {
         display: flex;
         column-gap: 5px;
-        position: absolute;
-        bottom: 0;
-        transform: translateY(38px);
 
         @media (max-width:767px) {
             position: inherit;
