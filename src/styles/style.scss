@@ -398,7 +398,8 @@
     }
 
     &__item {
-        position:relative;
+        display: flex;
+        flex-direction: column;
         @media (max-width:767px) {
         margin-bottom:49px;
         }
@@ -408,6 +409,7 @@
     }
 
     &__wrapper-photo{
+        display:flex;
         margin-bottom:30px;
         aspect-ratio: 1;
 
@@ -464,6 +466,7 @@
     font-weight: 400;
     line-height: 21px;
     margin-bottom: 38px;
+    flex-grow:1;
 
     @media (max-width:1024px) {
         line-height: 16px;
