@@ -29,6 +29,7 @@
 
     &:hover {
         background-color: #E71414;
+        transition: all 0.3s linear;
     }
 
     &:active {
@@ -73,8 +74,17 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #BABBC5;
+        position: relative;
 
+        &:after {
+            content: "";
+            display:block;
+            position: absolute;
+            left: 15px;
+            top: 100%;
+            width: calc(100% - 30px);
+            border-bottom: 1px solid #BABBC5;
+        }
         @media (max-width:767px) {
             border-bottom: none;
         }
@@ -108,6 +118,8 @@
         text-transform: uppercase;
         list-style-type: none;
         text-align: center;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s linear;
 
         @media (max-width:1024px) {
             min-width: 112px;
@@ -123,9 +135,6 @@
             color: #E71414;
         }
 
-        &_current {
-            border-bottom: 3px solid #BABBC5;
-        }
     }
 
     &__menu {
@@ -185,9 +194,6 @@
                 text-align: left;
             }
 
-            .nav__item_current {
-                border: none;
-            }
         }
     }
 }
@@ -425,6 +431,8 @@
         align-items: center;
         row-gap: 32px;
         opacity: 0;
+        text-decoration: none;
+        transition: all 0.4s linear;
 
         &:hover {
             opacity: 1;
@@ -588,6 +596,23 @@
 
     &__social-media {
         @include social-media-icon();
+        &:hover {
+        border-color: #353C65;
+        transform: scale(1.1);
+        transition: all 0.5s;
+
+        path {
+            fill: #353C65;
+        }
+
+        &:active {
+            border-color: #2C3154;;
+
+        path {
+            fill: #2C3154;;
+        }
+        }
+        }
     }
 }
 
@@ -692,6 +717,25 @@
 
     &__social-media {
         @include social-media-icon();
+
+        &:hover{
+        border-color: #FF4343;
+        transform: scale(1.1);
+        transition: all 0.5s;
+
+        path {
+            fill: #FF4343;
+        }
+
+        &:active {
+            border-color: #E71414;
+
+        path {
+            fill: #E71414;
+        }
+        }
+
+        }
     }
 
     &__copyright{
