@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Raleway:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/style.scss" />
   <title>AXIVEBOX22</title>
 </head>
@@ -424,17 +425,67 @@
     </div>
   </div>
 
-  <div class="slider">
-    <div class="slider__photo-wrapper">
-      <img class="slider__photo" src="/images/women.png" alt="Susan Sims">
-    </div>
-    <div class="slider__info">
-        <div class="slider__text">
-          <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-          <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+  <div class="swiper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slider">
+        <div class="slider__photo-wrapper">
+          <img class="slider__photo" src="/images/women.png" alt="Susan Sims">
         </div>
+        <div class="slider__info">
+            <div class="slider__text">
+              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider">
+        <div class="slider__photo-wrapper">
+          <img class="slider__photo" src="/images/man_1.jpg" alt="Susan Sims">
+        </div>
+        <div class="slider__info">
+            <div class="slider__text">
+              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider">
+        <div class="slider__photo-wrapper">
+          <img class="slider__photo" src="/images/woman_1.jpg" alt="Susan Sims">
+        </div>
+        <div class="slider__info">
+            <div class="slider__text">
+              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider">
+        <div class="slider__photo-wrapper">
+          <img class="slider__photo" src="/images/man_2.jpg" alt="Susan Sims">
+        </div>
+        <div class="slider__info">
+            <div class="slider__text">
+              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider">
+        <div class="slider__photo-wrapper">
+          <img class="slider__photo" src="/images/woman_2.jpg" alt="Susan Sims">
+        </div>
+        <div class="slider__info">
+            <div class="slider__text">
+              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+            </div>
+        </div>
+      </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
+  
   
   <section class="download">
     <div class="container">
@@ -498,7 +549,17 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>
