@@ -62,6 +62,10 @@
     max-width: 1202px;
     padding: 0 16px;
     margin: 0 auto;
+
+    @media (max-width:767px) {
+        padding: 0 20px;
+    }
 }
 
 .header {
@@ -78,7 +82,7 @@
 
         &:after {
             content: "";
-            display:block;
+            display: block;
             position: absolute;
             left: 15px;
             top: 100%;
@@ -594,7 +598,7 @@
     &__contacts {
         display: flex;
         column-gap: 5px;
-        margin-top:auto;
+        margin-top: auto;
 
         @media (max-width:767px) {
             position: inherit;
@@ -604,22 +608,25 @@
 
     &__social-media {
         @include social-media-icon();
+
         &:hover {
-        border-color: #353C65;
-        transform: scale(1.1);
-        transition: all 0.5s;
+            border-color: #353C65;
+            transform: scale(1.1);
+            transition: all 0.5s;
 
-        path {
-            fill: #353C65;
-        }
+            path {
+                fill: #353C65;
+            }
 
-        &:active {
-            border-color: #2C3154;;
+            &:active {
+                border-color: #2C3154;
+                ;
 
-        path {
-            fill: #2C3154;;
-        }
-        }
+                path {
+                    fill: #2C3154;
+                    ;
+                }
+            }
         }
     }
 }
@@ -640,6 +647,8 @@
     }
 
     &__photo-wrapper{
+        aspect-ratio: 1 / 0.66;
+
         @media (max-width:767px) {
             display: flex;
         }  
@@ -656,9 +665,19 @@
         background-color: #5C3249;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        padding: 0 16px 0 129px;
 
+
+        @media (max-width:1024px) {
+            padding: 61px 16px 110px 86px;
+            justify-content: flex-start;
+        }
+
+        @media (max-width:767px) {
+            padding: 23px 25px 95px 20px;
+            text-align: center;
+         } 
     }
 
     &__text {
@@ -669,8 +688,7 @@
         }
 
         @media (max-width:767px) {
-            padding: 23px 20px 95px;
-            width: 100%;
+            max-width: 100%;
          } 
     }
 
@@ -817,15 +835,12 @@
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
-
         @media (max-width:767px) {
-        margin-bottom: 59px;
+            margin-bottom: 59px;
         }
 
         &:last-child {
-            margin-bottom:0;
+            margin-bottom: 0;
         }
     }
 
@@ -857,6 +872,7 @@
         font-family: 'Raleway', sans-serif;
         font-weight: 400;
         line-height: 21px;
+        margin: 0 auto;
 
         @media (max-width:1024px) {
             font-size: 14px;
@@ -873,61 +889,68 @@
         display: flex;
         column-gap: 27px;
         justify-content: center;
-        margin-top: auto;
+        margin-top: 49px;
 
         @media (max-width:1024px) {
             column-gap: 23px;
+            margin-top: 33px;
         }
-        
+
         @media (max-width:767px) {
             column-gap: 16px;
+            margin-top: 37px;
         }
     }
 
     &__social-media {
         @include social-media-icon();
 
-        &:hover{
-        border-color: #FF4343;
-        transform: scale(1.1);
-        transition: all 0.5s;
+        &:hover {
+            border-color: #FF4343;
+            transform: scale(1.1);
+            transition: all 0.5s;
 
-        path {
-            fill: #FF4343;
-        }
+            path {
+                fill: #FF4343;
+            }
 
-        &:active {
-            border-color: #E71414;
+            &:active {
+                border-color: #E71414;
 
-        path {
-            fill: #E71414;
-        }
-        }
+                path {
+                    fill: #E71414;
+                }
+            }
 
         }
     }
 
-    &__copyright{
-        padding: 24px 16px;
+    &__copyright {
+        padding: 24px 0;
         background-color: #2C3154;
 
         @media (max-width:1024px) {
-            padding: 14px 16px;
+            padding: 14px 0;
         }
 
         @media (max-width:767px) {
-            padding: 28px 20px;
+            padding: 28px 0;
         }
     }
 
-    &__text{
-        margin: 0 auto;
-        max-width:370px;
+    &__text {
+        max-width: 370px;
+
+        @media (max-width:1024px) {
+            max-width: 314px;
+        }
+
+        @media (max-width:767px) {
+            max-width: 100%;
+        }
     }
 
     &__text_darkened {
         color: #808080;
     }
 }
-
-
