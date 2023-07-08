@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.path {
+    transition: fill .3s linear;
+}
+
 @mixin btn {
     font-family: 'Raleway', sans-serif;
     max-width: 370px;
@@ -655,11 +659,12 @@
     }
 
     &__photo-wrapper{
-        aspect-ratio: 1 / 0.66;
         display: flex;
+        position: relative;
 
         @media (max-width:767px) {
             display: flex;
+            aspect-ratio: 1 / 0.66;
         }  
     }
 
@@ -668,6 +673,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     &__info{
@@ -675,7 +683,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 16px 0 129px;
+        padding: 133px 16px 116px 129px;
 
 
         @media (max-width:1024px) {
@@ -952,11 +960,11 @@
 
     &__social-media {
         @include social-media-icon();
+        transition: all 0.5s;
 
         &:hover {
             border-color: #FF4343;
             transform: scale(1.1);
-            transition: all 0.5s;
 
             path {
                 fill: #FF4343;
