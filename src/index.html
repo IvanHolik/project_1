@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Raleway:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/style.scss" />
   <title>AXIVEBOX22</title>
 </head>
@@ -44,12 +44,12 @@
             fill="white" />
         </svg>
       </a>
-      <div class="nav__menu">
+      <div class="nav__menu" id="toggle">
         <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16 19H40V22H16V19ZM16 26.5H40V29.5H16V26.5ZM16 34H40V37H16V34Z" fill="white" />
         </svg>
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul class="nav__items">
           <li class="nav__item nav__item_current">
             <a class="nav__link" href="#">features</a>
@@ -432,10 +432,11 @@
           <img class="slider__photo" src="/images/women.png" alt="Susan Sims">
         </div>
         <div class="slider__info">
-            <div class="slider__text">
-              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
-            </div>
+          <div class="slider__text">
+            <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed
+              odio dui. Aenean eu leo quam...”</p>
+            <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
         </div>
       </div>
       <div class="swiper-slide slider">
@@ -443,10 +444,11 @@
           <img class="slider__photo" src="/images/man_1.jpg" alt="Susan Sims">
         </div>
         <div class="slider__info">
-            <div class="slider__text">
-              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
-            </div>
+          <div class="slider__text">
+            <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed
+              odio dui. Aenean eu leo quam...”</p>
+            <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
         </div>
       </div>
       <div class="swiper-slide slider">
@@ -454,10 +456,11 @@
           <img class="slider__photo" src="/images/woman_1.jpg" alt="Susan Sims">
         </div>
         <div class="slider__info">
-            <div class="slider__text">
-              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
-            </div>
+          <div class="slider__text">
+            <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed
+              odio dui. Aenean eu leo quam...”</p>
+            <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
         </div>
       </div>
       <div class="swiper-slide slider">
@@ -465,10 +468,11 @@
           <img class="slider__photo" src="/images/man_2.jpg" alt="Susan Sims">
         </div>
         <div class="slider__info">
-            <div class="slider__text">
-              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
-            </div>
+          <div class="slider__text">
+            <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed
+              odio dui. Aenean eu leo quam...”</p>
+            <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
         </div>
       </div>
       <div class="swiper-slide slider">
@@ -476,17 +480,18 @@
           <img class="slider__photo" src="/images/woman_2.jpg" alt="Susan Sims">
         </div>
         <div class="slider__info">
-            <div class="slider__text">
-              <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-              <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
-            </div>
+          <div class="slider__text">
+            <p class="slider__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed
+              odio dui. Aenean eu leo quam...”</p>
+            <p class="slider__author">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
-  
-  
+
+
   <section class="download">
     <div class="container">
       <h2 class="download__title">Are You Ready to Start? Download Now For Free!</h2>
@@ -552,6 +557,13 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
   <script>
+    var trigger = document.getElementById('toggle');
+    var box = document.getElementById('nav');
+
+    toggle.addEventListener('click', function () {
+      box.classList.toggle('open');
+    });
+
     var swiper = new Swiper(".swiper-container", {
       spaceBetween: 30,
       pagination: {
