@@ -774,23 +774,23 @@ path {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 133px 16px 116px 129px;
+        padding: 133px 170px 116px 129px;
 
         @media (max-width:1416px) {
-            padding: 90px 16px 112px 110px;
+            padding: 90px 135px 112px 110px;
         }
 
         @media (max-width:1220px) {
-            padding: 68px 16px 110px 88px;
+            padding: 68px 110px 110px 88px;
         }
 
         @media (max-width:1024px) {
-            padding: 61px 16px 110px 86px;
+            padding: 61px 104px 110px 86px;
             justify-content: flex-start;
         }
 
         @media (max-width:972px) {
-            padding: 30px 20px 65px 30px;
+            padding: 30px 85px 65px 30px;
         }
 
         @media (max-width:767px) {
