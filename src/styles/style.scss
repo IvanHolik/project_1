@@ -4,27 +4,9 @@
     padding: 0;
 }
 
-.path {
+path {
     transition: fill .3s linear;
 }
-
-.nav__menu.open:before {
-    transform: rotate(-45deg);
-    top: 9px;
-    transition: all 0.25s linear;
-}
-
-.nav__menu.open::after {
-    transform: rotate(45deg);
-    bottom: 8px;
-    transition: all 0.25s linear;
-}
-
-.nav__menu.open .nav__span {
-    transform: scale(0);
-    transition: all 0.25s linear;
-}
-
 
 @mixin btn {
     font-family: 'Raleway', sans-serif;
@@ -235,24 +217,24 @@
 
         }
 
-        // &open {
-        //     &:before {
-        //     transform: rotate(-45deg); 
-        //     top: 9px;
-        //     transition: all 0.25s linear;
-        //     }
+        &.open {
+            &:before {
+                transform: rotate(-45deg);
+                top: 9px;
+                transition: all 0.25s linear;
+            }
 
-        //     &:after {
-        //         transform: rotate(45deg);
-        //         bottom: 8px;
-        //         transition: all 0.25s linear;
-        //     }
+            &:after {
+                transform: rotate(45deg);
+                bottom: 8px;
+                transition: all 0.25s linear;
+            }
 
-        //     & nav__span {
-        //     transform: scale(0);
-        //     transition: all 0.25s linear;
-        //     }
-        // }    Почему не работает???      
+            & .nav__span {
+                transform: scale(0);
+                transition: all 0.25s linear;
+            }
+        }
     }
 
     &__span {
@@ -330,6 +312,7 @@
     @media (max-width:767px) {
         padding: 106px 0 52px;
         margin-bottom: 40px;
+        min-height: 100vh;
     }
 
     &__container {
@@ -720,7 +703,8 @@
 
         &:hover {
             border-color: #353C65;
-            transform: scale(1.1);
+            transform: scale(1.2);
+            will-change: transform;
             transition: all 0.3s linear;
 
             path {
@@ -734,6 +718,10 @@
                     fill: #2C3154;
                 }
             }
+        }
+
+        &__link {
+            display: flex;
         }
     }
 }
@@ -1095,6 +1083,7 @@
         &:hover {
             border-color: #FF4343;
             transform: scale(1.1);
+            will-change: transform;
             transition: all 0.3s linear;
 
             path {
@@ -1120,6 +1109,8 @@
     &__copyright {
         padding: 24px 0;
         background-color: #2C3154;
+        display: flex;
+        justify-content: center;
 
         @media (max-width:1024px) {
             padding: 14px 0;
@@ -1128,17 +1119,20 @@
         @media (max-width:767px) {
             padding: 28px 0;
         }
-    }
 
-    &__text {
-        max-width: 370px;
+        &-container {
+            max-width: 370px;
+            padding: 0 16px;
 
-        @media (max-width:1024px) {
-            max-width: 314px;
-        }
+            @media (max-width:1024px) {
+                max-width: 314px;
+            }
 
-        @media (max-width:767px) {
-            max-width: 100%;
+            @media (max-width:767px) {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
         }
     }
 
